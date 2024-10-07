@@ -16,13 +16,17 @@
 
 </head>
 <body>
+    <!-- create an input field to take in any Pokemon name -->
     <input type="text" id="pokemonName" placeholder="Enter pokemon name">
+    <!-- press button to intake any input & invoke pokeData() function -->
     <button onclick="pokeData()">Fetch Pokemon</button><br>
 
+    <!-- declare an image element currently displaying nothing -- later will return w/ respective Pokemon img input name -->
     <img src="" alt="Pokemon Sprite" id="pokemonSprite" style="display:none">
     <!-- <script src="index.js"></script> -->
 
-    <img class="blur" src="./images/sheep_token.png" alt="Sheep Token" height="300">
+    <!-- display a random Pokemon from the ./images file path -->
+    <img class="blur" id="random" src="./images/charmander.png" alt="Random Pokemon" height="300">
 
     <div class="maincontent">
         <div id="grid" class="imgrid"></div>

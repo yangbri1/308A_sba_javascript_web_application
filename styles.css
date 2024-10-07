@@ -1,8 +1,10 @@
+/* apply command "!important" to override Bootstrap default overlays */
 body {
     background-color: #454545 !important; 
     width: 100%; 
     height: 100%;
 }
 
+/* apply blur effect to blur class image */
 .blur {filter: blur(4px);}
 
