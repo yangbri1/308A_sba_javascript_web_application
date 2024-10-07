@@ -8,18 +8,54 @@ body {
 
 h1{
     font-family: 'Courier New', Courier, monospace;
+    font-size:3rem;
     text-align: center;
     padding-top:5%;
 }
 
 .content{
+    margin:auto;
     text-align:center;
     justify-content:space-around;
     padding-bottom: 25%;
 
 }
+
+#pokemon_name{
+    padding:10px;
+    font-size: 2rem;
+    font-weight:bold;
+    border: 3px solid #FFE6C7;
+}
+
+.content > button{
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size:2rem;
+    background-color:#FF6000;
+    color:aliceblue;
+    border:none;
+    border-radius: 3px;
+    cursor:grab;
+}
+
+/* now accessing the button pseudo-class */
+.content > button:hover{
+    background-color: #FFA559;
+}
+.content > img{
+    margin:auto;
+    border-radius: 10px;
+}
+
+
 /* apply blur effect to blur class image */
 .blur{
     filter: blur(4px);
 }
 
+p{
+    display:flex;
+    float:right;
+    color: #FFE6C7;
+}

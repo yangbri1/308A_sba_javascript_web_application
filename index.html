@@ -7,9 +7,12 @@
 
     <!-- link to styles.css -->
     <link rel="stylesheet" href="styles.css">
-    <!-- defer keyword to make sure the script does NOT interfere -->
-    <script defer type="text/javascript" src="./index.js"></script>
-
+    
+    <!-- defer keyword to make sure the script does NOT interfere in operations until end -->
+    <!-- <script defer type="module" src="./index.mjs" import { pokeData } from "./index.mjs"; pokeData(); ></script> -->
+    <script defer type="module" src="./index.mjs" ></script>
+    <script defer type="module" src="./helper_function.mjs"></script>
+    
     <!-- include Bootstrap via CDN granting Bootstrap styling classes-->
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
@@ -21,12 +24,12 @@
     <div class="content">
 
         <!-- create an input field to take in any Pokemon name -->
-        <input type="text" id="pokemonName" placeholder="Enter Pokemon">
+        <input type="text" id="pokemon_name" placeholder="Please enter a Pokemon">
         <!-- press button to intake any input & invoke pokeData() function -->
         <button onclick="pokeData()">Submit</button><br>
 
         <!-- declare an image element currently displaying nothing -- later will return w/ respective Pokemon img input name -->
-        <img src="" alt="Pokemon Sprite" id="pokemonSprite" style="display:none">
+        <img src="" alt="Pokemon Sprite" id="pokemon_sprite" style="display:none">
         <!-- <script src="index.js"></script> -->
 
         <!-- display a random Pokemon from the ./images file path -->
@@ -34,13 +37,25 @@
     </div>
     
     <!-- inline styling for the line  -->
-    <hr style="border: 2px solid rgb(193, 200, 207)">
-    <footer>
+    <hr style="border: 2px solid hsl(41, 77%, 47%)">
+    <!-- social media links, trademarks, affiliations, etc. -->
+    <div>
+        <footer>
+            <nav aria-label="primary"></nav>
+            <a href="https://www.facebook.com/" target="_blank" title="Facebook"> 
+            <img src="./images/icons8-facebook-50.png" alt="facebook"></a> 
+            <a href="https://www.twitter.com/" target="_blank" title="Twitter"> 
+            <img src="./images/icons8-twitter-50.png" alt="twitter"></a>
+            <a href="https://www.gmail.com/" target="_blank" title="Gmail"> 
+            <img src="./images/icons8-gmail-50.png" alt="gmail"></a>
+            <a href="https://www.wechat.com/" target="_blank" title="Wehat"> 
+            <img src="./images/icons8-wechat-50.png" alt="wechat"></a>
+            <a href="https://www.qq.com/" target="_blank" title="QQ"> 
+            <img src="./images/icons8-qq-50.png" alt="qq"></a>
+            <p>This website is neither endorsed nor affiliated by any means to any country or third party entities (<em>Nintendo please don't sue me ... </em> 😅)</p>
+        </footer>
+    </div>
 
-    </footer>
-
-    <!-- <div class="maincontent">
-        <div id="grid" class="imgrid"></div>
-    </div> -->
+    
 </body>
 </html>

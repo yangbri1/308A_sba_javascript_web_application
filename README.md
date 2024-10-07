@@ -14,9 +14,11 @@
 - - - -
 
 ## Technologies used
-### HTTP Requests (GET), API Key, fetch() function, DOM properties, methods, and techniques
-#### 
+### HTTP Requests (GET), API Key, fetch() function, asynchronous functions & await, promises
+####
 
+## DOM properties, methods, and techniques
+### 
 ### BOM properties, methods, and techniques:
 #### window.prompt(), window.alert(), window.close(), etc.
 
@@ -27,11 +29,63 @@
 #### minlength, maxlength, regex, required, etc.
 
 ### CSS inlined and external styling
-### JavaScript built-in objects, methods
-#### Math.random(), .toLowerCase(), .toUpperCase().
+#### filter:blur(), justify-content(), align-text, font-family, etc.
 
-##
+### JavaScript built-in objects, methods
+#### Math.random(), .toLowerCase(), .toUpperCase(), .split(), .pop(), .shift(), etc.
+
+### HTML String Manipulation
+#### .substring(), .trim()
 
 * Others: Github add, commits; JavaScript syntax, VSCode IDE
 
 - - - -
+
+## How to get started
+### Functionality over form!!
+### Found some interesting API's while checking them out but many of of them documentations were inadequate or requires constantly being logged in (private API). Spent too much time starting an idea but half-way through realizing the API is a no-go sadly. At the end, decided that simple is best and went with a popular API with extensive documentation to back things up.
+
+- - - - 
+
+## Acknowledgements
+### All used materials are stored in the "reference" folder of this repo
+
+- - - -
+
+### API URL
+#### https://pokeapi.co/about 
+
+### API URL w/ Endpoint
+#### https://pokeapi.co/api/v2/pokemon/
+
+### CSS blur effect
+#### https://www.w3schools.com/css/css3_images.asp#:~:text=Learn%20how%20to%20style%20images%20using%20CSS.
+
+### Compatible color palettes for website
+#### https://colorhunt.co/palettes/halloween
+
+### Pokemon Images
+#### https://bulbapedia.bulbagarden.net/wiki/Bulbasaur_(Pok%C3%A9mon)#/media/File:0001Bulbasaur.png
+
+### Pokemon GIFs
+#### https://tenor.com/view/treecko-pokemon-hey-hello-hi-gif-5483105 
+
+### Emojis
+#### https://emojipedia.org/
+
+### Icons
+#### https://icons8.com/icons/set/login
+
+### Lecture Notes
+#### https://ps-react-curriculum.herokuapp.com/308A/1/lesson/
+#### https://ps-react-curriculum.herokuapp.com/308A/3/lesson/
+#### https://ps-react-curriculum.herokuapp.com/308A/4/lesson/
+#### https://ps-react-curriculum.herokuapp.com/308A/5/lesson/
+
+
+- - - -
+
+> <em>
+
+
+
