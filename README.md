@@ -85,7 +85,16 @@
 
 - - - -
 
-> <em>
+> <em> Opening the web application would prompt an window.prompt() requesting the user input either "gif" or "image" for their preferred choice. If the choice is neither "gif" nor "image", the user would be prompted again for one of those choices until they follow through or the number of tries goes out. When that happens, window.close() BOM command would close out the of the web application.
 
+> In the case that the user finally agreed to proceed, there would now be a blurred image or gif presented at the middle of their screen. The selection was based off of the built-in Math.random() function acting as an integer for an array of relative paths leading to media files enclosed in the images directory. Thus, upon reload of the web application there may be a new image or gif that takes its spot.
+
+> Above the image there is a search bar provided for the user to guess the pokemon off of the blurred silhouette. Entering a Pokemon's name sends a HTTP GET request using fetch() function to retrieve some data from the PokeAPI. Since we are using the endpoint of '.../pokemons/' it would yield with its respective picture. To use as comparison to the blurred image/gif.
+
+> Once the correct Pokemon is inputted the image would be rid of its filter. Simultaneously, a window.alert() would congratulate the player on their work.
+
+> Aside: GIFs may be slightly harder than stagnant images to guess.
+
+> Underneath are some additional GIFs as well as a disclaimer for Nintendo. </em>
 
 
