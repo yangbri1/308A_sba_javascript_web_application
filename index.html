@@ -16,20 +16,26 @@
 
 </head>
 <body>
-    <!-- create an input field to take in any Pokemon name -->
-    <input type="text" id="pokemonName" placeholder="Enter pokemon name">
-    <!-- press button to intake any input & invoke pokeData() function -->
-    <button onclick="pokeData()">Fetch Pokemon</button><br>
 
-    <!-- declare an image element currently displaying nothing -- later will return w/ respective Pokemon img input name -->
-    <img src="" alt="Pokemon Sprite" id="pokemonSprite" style="display:none">
-    <!-- <script src="index.js"></script> -->
+    <h1> Guess that Pokemon </h1>
+    <div class="content">
 
-    <!-- display a random Pokemon from the ./images file path -->
-    <img class="blur" id="random" src="./images/charmander.png" alt="Random Pokemon" height="300">
+        <!-- create an input field to take in any Pokemon name -->
+        <input type="text" id="pokemonName" placeholder="Enter pokemon name">
+        <!-- press button to intake any input & invoke pokeData() function -->
+        <button onclick="pokeData()">Fetch Pokemon</button><br>
 
-    <div class="maincontent">
-        <div id="grid" class="imgrid"></div>
+        <!-- declare an image element currently displaying nothing -- later will return w/ respective Pokemon img input name -->
+        <img src="" alt="Pokemon Sprite" id="pokemonSprite" style="display:none">
+        <!-- <script src="index.js"></script> -->
+
+        <!-- display a random Pokemon from the ./images file path -->
+        <img class="blur" id="random_img" src="./images/charmander.png" alt="Random Pokemon" title="This is a pokemon...right?" height="300">
     </div>
+    
+
+    <!-- <div class="maincontent">
+        <div id="grid" class="imgrid"></div>
+    </div> -->
 </body>
 </html>
