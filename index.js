@@ -7,34 +7,58 @@ const poke_pic =  document.getElementById("random_img");
 const img_array = ['./images/bulbasaur.png', './images/charmander.png', './images/chikorita.png', './images/cyndaquil.png',
   './images/mudkip.png', './images/squirtle.png', './images/torchic.png', './images/totodile.png', './images/treecko.png'];
 
-// poke_index will be a random number b/t 0-8 (9 pokemons in array)
+// declare an array of Pokemon gifs
+const gif_array = ['./images/bulbasaur.gif', './images/charmander.gif', './images/chikorita.gif', './images/cyndaquil.gif',
+  './images/mudkip.png', './images/squirtle.gif', './images/torchic.gif', './images/totodile.gif', './images/treecko.gif']
+
+  // poke_index will be a random number b/t 0-8 (9 pokemons in array)
 let poke_index = Math.floor(Math.random() * img_array.length);
 
-let poke_chosen = img_array[poke_index];
+// let poke_chosen = img_array[poke_index];
 
 // using JavaScript built-in String prototype methods to retrieve the pokemon name
 // access chosen relative path, get an array split by '/', pop() off & save last element
 // now split by '.' and unshift() & save the first element
-let poke_name = img_array[poke_index].split("/").pop().split(".").unshift();
+let poke_name = img_array[poke_index].split("/").pop().split(".").shift();
+
+// BOM prompts user for an input
+let input = window.prompt(`Please type in "gif" or "image" to proceed`);
 
 let tries = 0;
-let limit = 5;
+// declare variable limit to be the random poke_index number
+let limit = poke_index;
 
+// continuously prompt user for either an "gif" or "image" if neither were given
 while(tries < limit){
-  // BOM prompts user for an input
-  let input = window.prompt(`Please type in "gif" or "image" to proceed`);
+  
   // converts input into lowercase & remove any excess whitespaces from front & back
   input = input.toLowerCase().trim();
+
   // if user asks for gif
   if(input === "gif"){
-    continue;
+    poke_pic.src = gif_array[poke_index];
+    break;
   }
+  // if user asks for image
   else if(input == "image"){
     poke_pic.src = img_array[poke_index];
     break;
   }
-  tries++;
+  // otherwise ... 
+  else{
+    // re-prompts user for wanted input & notify them of attempts left
+    input = prompt(`${limit - tries} attempts left, "gif" or "image" please`);
+    // increment loop by 1 to continue the loop
+    tries++;
+  }
 }
+// if user runs out of tries
+if(tries === limit){
+  alert(`🟥 ERROR 404 🟥`);
+  // close out tab
+  window.close();
+}
+
 //create an "async" function so we can use "await" within
 async function pokeData(){
     // try-catch block for error handling
@@ -91,8 +115,10 @@ async function pokeData(){
 function poke_guess(pokemon){
   // if the user input matches the shown Pokemon
   if(pokemon == poke_name){
+    // capitalize Pokemon's name
+    let poke_cap = poke_name[0].toUpperCase() + poke_name.substring(1);
     // display BOM window.alert() to user
-    window.alert("Congratulations!! 🥳");
+    window.alert(`Congratulations!! Indeed it's a ${poke_cap}!! 🥳`);
     // removes any previus filter off of the image
     poke_pic.style.filter = "none";
     // poke_pic.classList.remove("blur");
