@@ -1,12 +1,24 @@
+// obtain DOM element w/ id of "random"
+const poke_pic =  document.getElementById("random_img");
+// console.log(poke_pic);
+
+
+// initialize an array of Pokemon images
+const img_array = ['./images/bulbasaur.png', './images/charmander.png', './images/chikorita.png', './images/cyndaquil.png',
+  './images/mudkip.png', './images/squirtle.png', './images/torchic.png', './images/totodile.png', './images/treecko.png'];
+
+// poke_index will be a random number b/t 0-8 (9 pokemons in array)
+let poke_index = Math.floor(Math.random() * img_array.length);
+
+let poke_chosen = img_array[poke_index];
+
+// using JavaScript built-in String prototype methods to retrieve the pokemon name
+// access chosen relative path, get an array split by '/', pop() off & save last element
+// now split by '.' and unshift() & save the first element
+let poke_name = img_array[poke_index].split("/").pop().split(".").unshift();
 
 let tries = 0;
 let limit = 5;
-// initialize an array of Pokemon images
-const img_array = ['images\bulbasaur.png', 'images\charmander.png', 'images\chikorita.png', 'images\cyndaquil.png',
-  'images\mudkip.png', 'images\squirtle.png', 'images\torchic.png', 'images\totodile.png', 'images\treecko.png'];
-
-  // poke_index will be a random number b/t 0-8 (9 pokemons in array)
-let poke_index = Math.floor(Math.random() * img_array.length);
 
 while(tries < limit){
   // BOM prompts user for an input
@@ -15,10 +27,11 @@ while(tries < limit){
   input = input.toLowerCase().trim();
   // if user asks for gif
   if(input === "gif"){
-
+    continue;
   }
   else if(input == "image"){
-    img_array[poke_index]
+    poke_pic.src = img_array[poke_index];
+    break;
   }
   tries++;
 }
@@ -77,10 +90,7 @@ async function pokeData(){
 
 function poke_guess(pokemon){
   // if the user input matches the shown Pokemon
-  if(pokemon == "charmander"){
-    // obtain DOM element w/ id of "random"
-    let poke_pic =  document.getElementById("random_img");
-    // console.log(poke_pic);
+  if(pokemon == poke_name){
     // display BOM window.alert() to user
     window.alert("Congratulations!! 🥳");
     // removes any previus filter off of the image
