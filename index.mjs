@@ -25,7 +25,7 @@ let poke_name = img_array[poke_index].split("/").pop().split(".").shift();
 helper.user_input(poke_pic, poke_index, gif_array, img_array);
 
 //create an "async" function so we can use "await" within
-async function pokeData(){
+export async function pokeData(){
     // try-catch block for error handling
     try{
         // retrieve input element by ID from document DOM
